@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ψηφιακό Μενού</title>
+  <style>
+    :root {
+      --bg: #f0f0f0;
+      --card: #ffffff;
+      --text: #333;
+      --heading: #111;
+      --accent: #888;
+      --qr-size: 120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 16px;
+    }
+    .qr {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .qr img {
+      width: var(--qr-size);
+      height: var(--qr-size);
+    }
+    h1 {
+      text-align: center;
+      color: var(--heading);
+      margin-bottom: 32px;
+    }
+    section {
+      margin-bottom: 32px;
+    }
+    section h2 {
+      font-size: 1.4em;
+      margin-bottom: 12px;
+      color: var(--heading);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 4px;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .item {
+      background: var(--card);
+      padding: 10px 14px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .item-name { font-weight: 500; }
+    .item-price { font-weight: 400; }
+    @media (min-width: 600px) {
+      .items { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="qr">
+      <img src="qr_code.png" alt="Scan to view the menu">
+      <p>Σαρώστε για το ψηφιακό μενού</p>
+    </div>
+    <h1>Μενού</h1>
+    <section>
+      <h2>Καφέδες</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Ελληνικός (Μόνος)</span><span class="item-price">1,00€</span></div>
+        <div class="item"><span class="item-name">Ελληνικός (Διπλός)</span><span class="item-price">1,80€</span></div>
+        <div class="item"><span class="item-name">Φραπέ/ΝεςΚαφέ με νερό</span><span class="item-price">2,00€</span></div>
+        <div class="item"><span class="item-name">Εσπρέσο (Μόνο)</span><span class="item-price">1,80€</span></div>
+        <div class="item"><span class="item-name">Εσπρέσο (Διπλό)</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Αμερικάνο (Μόνο)</span><span class="item-price">1,80€</span></div>
+        <div class="item"><span class="item-name">Αμερικάνο (Διπλό)</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Φρέντο Εσπρέσο</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Cappuccino (Μόνο)</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Cappuccino (Διπλό)</span><span class="item-price">2,70€</span></div>
+        <div class="item"><span class="item-name">Φρέντο Καπουτσίνο</span><span class="item-price">2,40€</span></div>
+        <div class="item"><span class="item-name">Εξτρα δόση espresso</span><span class="item-price">+0,50€</span></div>
+        <div class="item"><span class="item-name">Σαντιγύ κρέμα</span><span class="item-price">+0,50€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Ροφήματα</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Ζεστή Σοκολάτα</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Κρύα Σοκολάτα</span><span class="item-price">2,20€</span></div>
+        <div class="item"><span class="item-name">Mochachino</span><span class="item-price">2,70€</span></div>
+        <div class="item"><span class="item-name">Τσάι</span><span class="item-price">1,00€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Γάλατα & Κακάο</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Κακάο 250 ml</span><span class="item-price">1,00€</span></div>
+        <div class="item"><span class="item-name">Κακάο 500 ml</span><span class="item-price">1,50€</span></div>
+        <div class="item"><span class="item-name">Κακάο Zero 250 ml</span><span class="item-price">–</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Αναψυκτικά</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Coca-Cola (Zero) 330 ml</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Fanta 330 ml</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Sprite 330 ml</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Schweppes Soda 330 ml</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Lipton Ice Tea (Λεμόνι)</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Lipton Ice Tea (Ροδάκινο)</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Lipton Ice Tea (Green Tea)</span><span class="item-price">1,20€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Χυμοί</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Amita</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Motion</span><span class="item-price">1,50€</span></div>
+        <div class="item"><span class="item-name">Φυσικός Χυμός Πορτοκάλι</span><span class="item-price">1,50€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Μπύρες</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">ΑΛΦΑ 330 ml</span><span class="item-price">1,50€</span></div>
+        <div class="item"><span class="item-name">ΑΛΦΑ 500 ml</span><span class="item-price">2,50€</span></div>
+        <div class="item"><span class="item-name">Vergina 330 ml</span><span class="item-price">1,20€</span></div>
+        <div class="item"><span class="item-name">Vergina 500 ml</span><span class="item-price">2,00€</span></div>
+        <div class="item"><span class="item-name">Heineken 330 ml</span><span class="item-price">1,80€</span></div>
+        <div class="item"><span class="item-name">Heineken 500 ml</span><span class="item-price">2,80€</span></div>
+        <div class="item"><span class="item-name">Amstel 330 ml</span><span class="item-price">1,50€</span></div>
+        <div class="item"><span class="item-name">Amstel 500 ml</span><span class="item-price">2,50€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Οίνοι & Τσίπουρο</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Τσίπουρο χύμα 200 ml</span><span class="item-price">4,00€</span></div>
+        <div class="item"><span class="item-name">Eωθινών 200 ml</span><span class="item-price">7,50€</span></div>
+        <div class="item"><span class="item-name">Ηδωνικό 200 ml</span><span class="item-price">8,00€</span></div>
+        <div class="item"><span class="item-name">Εβρίτικο 200 ml</span><span class="item-price">7,00€</span></div>
+        <div class="item"><span class="item-name">Κρασί Λευκό Ξινό 200 ml</span><span class="item-price">5,00€</span></div>
+        <div class="item"><span class="item-name">Κρασί Ερυθρό Ξινό 200 ml</span><span class="item-price">5,00€</span></div>
+        <div class="item"><span class="item-name">Κρασί Ερυθρό Ημίγλυκο 200 ml</span><span class="item-price">5,00€</span></div>
+        <div class="item"><span class="item-name">Ρετσίνα Μαλ...τίνα</span><span class="item-price">2,50€</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>Τυλιχτά / Σάντουιτς</h2>
+      <div class="items">
+        <div class="item"><span class="item-name">Γύρος Κοτόπουλο</span><span class="item-price">2,80€</span></div>
+        <div class="item"><span class="item-name">Γύρος Μοσχαρίσιο</span><span class="item-price">3,00€</span></div>
+        <div class="item"><span class="item-name">Σου
